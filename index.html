@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandar Kalangutkar - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#121212',
+                        'light-text': '#e0e0e0',
+                        'accent': '#3b82f6',
+                        'secondary-text': '#9e9e9e'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(10)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                    },
+                    animation: {
+                        float: 'float 3s ease-in-out infinite',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* .profile-image {
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+        } */
+
+        .typing::after {
+            content: '_';
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        } */
+
+        .tech-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .tech-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #3B82F6 !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg text-light-text">
+    <div id="progressBar" class="fixed top-0 left-0 h-1 bg-teal-500 z-50 transition-all duration-100"></div>
+
+    <section class="min-h-screen flex items-center px-4 md:px-10">
+        <div class="flex flex-col flex-col-reverse md:flex-row items-center gap-12 gap-y-20 w-full">
+            <!-- Left side - Text content -->
+            <div class="md:w-1/2">
+                <i class="fa-brands fa-laravel text-red-600 text-[24px] ml-3 mb-3 animate-float"></i>
+                <h1 class="text-4xl md:text-5xl font-medium mb-6 leading-tight relative hidden md:block">
+                    <span class="block text-secondary-text icn1">Hello, <span
+                            class="bg-gradient-to-r from-green-400 via-teal-500 to-teal-500 text-transparent bg-clip-text">I'm
+                            Mandar Kalangutkar</span></span>
+                </h1>
+
+                <div class="relative">
+                    <p id="typed-text" class="text-2xl font-medium typing"></p>
+                    <!-- <i class="fa-solid fa-database text-[#7c3aed] text-[22px] absolute top-7 right-[-60px]"></i> -->
+                    <i class="fa-brands fa-aws text-[#FF9900] text-[22px] absolute top-4 md:top-7 right-0 md:right-[-60px] animate-float"
+                        style="color: #FF9900;"></i>
+                </div>
+
+                <p class="mt-6">
+                    <!-- Passionate about modern web development from responsive UIs to
+                    cloud infrastructure. I build fast, secure, and maintainable
+                    systems using cutting-edge technologies. -->
+                    I’m a passionate Full Stack Web Developer with experience building scalable, high-performance web
+                    applications. Skilled in both front-end and back-end technologies, I specialize in creating seamless
+                    user experiences and robust server-side logic. With a deep understanding of modern frameworks and
+                    tools, I bring ideas to life through clean, efficient code and innovative problem-solving
+                </p>
+
+                <div class="hidden md:block mt-8">
+                    <p class="text-secondary-text mb-3">Tech I work with :</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-3 py-1 bg-teal-900/40 rounded-full text-teal-300 border border-teal-800/50 text-sm">PHP</span>
+                        <span
+                            class="px-3 py-1 bg-teal-900/40 rounded-full text-teal-300 border border-teal-800/50 text-sm">Laravel</span>
+                        <span
+                            class="px-3 py-1 bg-teal-900/40 rounded-full text-teal-300 border border-teal-800/50 text-sm">React
+                            js</span>
+                        <span
+                            class="px-3 py-1 bg-teal-900/40 rounded-full text-teal-300 border border-teal-800/50 text-sm">Next
+                            js</span>
+                        <span
+                            class="px-3 py-1 bg-teal-900/40 rounded-full text-teal-300 border border-teal-800/50 text-sm">SQL</span>
+                        <span
+                            class="px-3 py-1 bg-teal-900/40 rounded-full text-teal-300 border border-teal-800/50 text-sm">AWS</span>
+                    </div>
+                </div>
+
+                <div class="hidden mt-12 md:flex flex-wrap gap-4 relative">
+                    <i
+                        class="fa-brands fa-react text-[#61dafb] text-[24px] absolute top-[-50px] md:top-10 right-20 animate-float"></i>
+
+                    <a href="mandarK-resume.pdf"
+                        class="px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-400 transition" download>Download
+                        CV</a>
+                    <a href="#contact-me"
+                        class="px-6 py-2 border border-secondary-text text-light-text rounded hover:bg-gray-800 transition">Contact
+                        Me</a>
+                </div>
+            </div>
+
+            <!-- Right side - Image -->
+            <div class="md:w-1/2 flex justify-center flex-col items-center p-4 pt-8 md:p-10">
+                <img src="images/profile-img.jpg" alt="Andrew Ryan"
+                    class="profile-image h-96 md:h-[510px] object-cover aspect-[2/3] rounded-2xl rounded-tr-sm">
+
+                <h1 class="font-semibold text-center text-2xl pt-5 block md:hidden pb-1">Mandar Kalangutkar</h1>
+
+                <div class="flex items-center gap-7 mt-4">
+                    <div class="bg-gray-700 rounded-full h-8 w-8 flex justify-center items-center">
+                        <i class="fa-brands fa-linkedin text-blue-500 text-xl cursor-pointer"></i>
+                    </div>
+                    <div class="bg-gray-700 rounded-full h-8 w-8 flex justify-center items-center">
+                        <i class="fa-brands fa-github text-gray-250 text-xl cursor-pointer"></i>
+                    </div>
+                    <div class="bg-gray-700 rounded-full h-8 w-8 flex justify-center items-center">
+                        <i class="fa-brands fa-instagram text-red-500 text-xl cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="mt-12 flex flex-wrap gap-4 relative md:hidden">
+                    <i
+                        class="fa-brands fa-react text-[#61dafb] text-[24px] absolute top-[-50px] md:top-10 right-20 animate-float hidden md:block"></i>
+
+                    <a href="mandarK-resume.pdf"
+                        class="px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-400 transition" download>Download
+                        CV</a>
+                    <a href="#contact-me"
+                        class="px-6 py-2 border border-secondary-text text-light-text rounded hover:bg-gray-800 transition">Contact
+                        Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-20 md:mt-8 px-4 md:px-10">
+        <!-- Technical Skills Heading -->
+        <div class="relative">
+            <h1 class="text-2xl font-bold uppercase mb-2 pb-2">TECHNICAL SKILLS</h1>
+            <i
+                class="devicon-react-original colored absolute -top-6 right-12 text-[24px] animate-float block md:hidden"></i>
+        </div>
+
+        <!-- Technologies Section -->
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-8 text-gray-500">Technologies</h2>
+
+            <!-- Skill Items Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Core PHP -->
+                <div class="bg-gradient-to-br from-[#333] via-[#222] to-[#111] p-4 rounded-lg shadow"
+                    data-aos="zoom-in">
+                    <div class="flex items-center mb-2">
+                        <!-- <i class="fab fa-php text-2xl text-purple-700 mr-3"></i> -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                            class="h-9 mr-3" />
+                        <span class="font-medium">Core PHP</span>
+                        <span
+                            class="ml-auto text-teal-500 text-sm border-[1px] rounded-full px-3 py-[1px] border-gray-600">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-500 rounded-full h-1 mt-5">
+                        <div class="bg-white rounded-full h-1 bg-gray-200" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Laravel -->
+                <div class="bg-gradient-to-br from-[#333] via-[#222] to-[#111] p-4 rounded-lg shadow"
+                    data-aos="zoom-in">
+                    <div class="flex items-center mb-2">
+                        <i class="fab fa-laravel text-2xl text-red-500 mr-3"></i>
+                        <span class="font-medium">Laravel</span>
+                        <span
+                            class="ml-auto text-teal-500 text-sm border-[1px] rounded-full px-3 py-[1px] border-gray-600">80%</span>
+                    </div>
+                    <div class="w-full bg-gray-500 rounded-full h-1 mt-6">
+                        <div class="bg-white rounded-full h-1 bg-gray-200" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- React JS -->
+                <div class="bg-gradient-to-br from-[#333] via-[#222] to-[#111] p-4 rounded-lg shadow"
+                    data-aos="zoom-in">
+                    <div class="flex items-center mb-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                            class="h-7 mr-3" />
+                        <span class="font-medium">React JS</span>
+                        <span
+                            class="ml-auto text-teal-500 text-sm border-[1px] rounded-full px-3 py-[1px] border-gray-600">65%</span>
+                    </div>
+                    <div class="w-full bg-gray-500 rounded-full h-1 mt-7">
+                        <div class="bg-white rounded-full h-1 bg-gray-200" style="width: 65%"></div>
+                    </div>
+                </div>
+
+                <!-- Next JS -->
+                <div class="bg-gradient-to-br from-[#333] via-[#222] to-[#111] p-4 rounded-lg shadow"
+                    data-aos="zoom-in">
+                    <div class="flex items-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+                            class="h-9 mr-3" />
+                        <span class="font-medium">Next JS</span>
+                        <span
+                            class="ml-auto text-teal-500 text-sm border-[1px] rounded-full px-3 py-[1px] border-gray-600">70%</span>
+                    </div>
+                    <div class="w-full bg-gray-500 rounded-full h-1 mt-6">
+                        <div class="bg-white rounded-full h-1 bg-gray-200" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- MySQL -->
+                <div class="bg-gradient-to-br from-[#333] via-[#222] to-[#111] p-4 pt-2 rounded-lg shadow"
+                    data-aos="zoom-in">
+                    <div class="flex items-center mb-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+                            class="h-12 mr-3" />
+                        <span class="font-medium">MySQL</span>
+                        <span
+                            class="ml-auto text-teal-500 text-sm border-[1px] rounded-full px-3 py-[1px] border-gray-600">85%</span>
+                    </div>
+                    <div class="w-full bg-gray-500 rounded-full h-1 mt-5">
+                        <div class="bg-white rounded-full h-1 bg-gray-200" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Redis -->
+                <div class="bg-gradient-to-br from-[#333] via-[#222] to-[#111] p-4 rounded-lg shadow"
+                    data-aos="zoom-in">
+                    <div class="flex items-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+                            class="h-8 mr-3" />
+                        <span class="font-medium">Redis</span>
+                        <span
+                            class="ml-auto text-teal-500 text-sm border-[1px] rounded-full px-3 py-[1px] border-gray-600">78%</span>
+                    </div>
+                    <div class="w-full bg-gray-500 rounded-full h-1 mt-7">
+                        <div class="bg-white rounded-full h-1 bg-gray-200" style="width: 78%"></div>
+                    </div>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="bg-gradient-to-br from-[#333] via-[#222] to-[#111] p-4 rounded-lg shadow"
+                    data-aos="zoom-in">
+                    <div class="flex items-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+                            class="h-9 mr-3" />
+                        <span class="font-medium">Bootstrap</span>
+                        <span
+                            class="ml-auto text-teal-500 text-sm border-[1px] rounded-full px-3 py-[1px] border-gray-600">80%</span>
+                    </div>
+                    <div class="w-full bg-gray-500 rounded-full h-1 mt-6">
+                        <div class="bg-white rounded-full h-1 bg-gray-200" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="bg-gradient-to-br from-[#333] via-[#222] to-[#111] p-4 rounded-lg shadow"
+                    data-aos="zoom-in">
+                    <div class="flex items-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                            class="h-8 mr-3" />
+                        <span class="font-medium">Tailwind CSS</span>
+                        <span
+                            class="ml-auto text-teal-500 text-sm border-[1px] rounded-full px-3 py-[1px] border-gray-600">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-500 rounded-full h-1 mt-7">
+                        <div class="bg-white rounded-full h-1 bg-gray-200" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-20 px-4 md:px-10">
+        <h1 class="text-2xl font-bold uppercase mb-3 pb-2">Tools Stack</h1>
+
+        <!-- Grid Layout -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Google Cloud Console -->
+            <!-- <div
+                class="bg-gradient-to-br from-gray-500 via-gray-600 to-gray-700 text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-700">
+                <div class="flex items-center mb-5">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+                        class="h-10 mr-2" />
+                    <h3
+                        class="text-xl font-semibold text-gray-200">
+                        Google Cloud Console</h3>
+                </div>
+                <p class="mb-4 text-gray-300 text-[15px]">
+                    Engineered comprehensive cloud solutions leveraging Google Cloud Console, implementing IAM policies,
+                    VM instances, and cloud storage. Automated deployment pipelines reduced provisioning time by 65%
+                    while maintaining enterprise-grade security.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full text-xs font-medium border border-blue-800/50">Cloud
+                        Compute</span>
+                    <span
+                        class="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full text-xs font-medium border border-blue-800/50">IAM
+                        Policies</span>
+                    <span
+                        class="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full text-xs font-medium border border-blue-800/50">GCP
+                        SDK</span>
+                </div>
+                <div class="mt-4 text-xs text-gray-400 flex items-center">
+                    <span class="inline-block w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                    Production-grade implementations
+                </div>
+            </div> -->
+
+            <div
+                class="bg-gradient-to-br from-[#444] via-[#333] to-[#222] text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-700">
+                <div class="flex items-center mb-5">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+                        class="h-10 mr-2" />
+                    <h3 class="text-xl font-semibold text-gray-200">
+                        Google Cloud Console</h3>
+                </div>
+                <p class="mb-4 text-gray-300 text-[15px]">
+                    Engineered full-stack solutions leveraging Google's ecosystem, implementing Maps JavaScript API for
+                    dynamic location services, OAuth 2.0 for secure authentication flows, and Sheets API for real-time
+                    data synchronization. Reduced development time by 40% through optimized API orchestration.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="bg-blue-900/50 text-white px-3 py-1 rounded-full text-xs font-medium border border-blue-800/50">
+                        Maps API
+                    </span>
+                    <span
+                        class="bg-blue-900/50 text-white px-3 py-1 rounded-full text-xs font-medium border border-blue-800/50">
+                        Places API
+                    </span>
+                    <span
+                        class="bg-blue-900/50 text-white px-3 py-1 rounded-full text-xs font-medium border border-blue-800/50">
+                        OAuth 2.0
+                    </span>
+                    <span
+                        class="bg-blue-900/50 text-white px-3 py-1 rounded-full text-xs font-medium border border-blue-800/50">
+                        Sheets API
+                    </span>
+                </div>
+            </div>
+
+            <!-- Automation & Load Testing -->
+            <div
+                class="bg-gradient-to-br from-[#444] via-[#333] to-[#222] text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-700">
+                <div class="flex items-center mb-5">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg"
+                        class="h-10 mr-2" />
+                    <h3 class="text-xl font-semibold text-white">
+                        Apache Jmeter</h3>
+                </div>
+                <p class="mb-4 text-gray-300 text-[15px]">
+                    Engineered JMeter test scripts to simulate 10,000+ concurrent users completing policy enrollments.
+                    Identified and resolved performance bottlenecks, reducing API latency by 42% through targeted
+                    optimizations. Automated reporting provided real-time insights into system behavior under load.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="bg-purple-900/50 px-3 py-1 rounded-full text-xs font-medium border border-purple-800/50">Automation</span>
+                    <span
+                        class="bg-purple-900/50 px-3 py-1 rounded-full text-xs font-medium border border-purple-800/50">Load
+                        Testing</span>
+                </div>
+            </div>
+
+            <!-- AWS EC2 Web Hosting -->
+            <div
+                class="bg-gradient-to-br from-[#444] via-[#333] to-[#222] text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-700">
+                <div class="flex items-center mb-5">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                        class="h-10 mr-4" />
+                    <h3 class="text-xl font-semibold text-white">
+                        AWS</h3>
+                </div>
+                <p class="mb-4 text-gray-300 text-[15px]">
+                    Deployed Laravel application on AWS EC2 instance, provisioning Linux servers with Nginx, MySQL, and
+                    PHP-FPM. Established secure SSH access and implemented manual deployment workflows including Git
+                    repository cloning.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-amber-700 px-3 py-1 rounded-full text-xs font-medium">EC2</span>
+                    <span class="bg-amber-700 px-3 py-1 rounded-full text-xs font-medium">Nginx</span>
+                    <span class="bg-amber-700 px-3 py-1 rounded-full text-xs font-medium">Server Setup</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-20 px-4 md:px-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-white mb-4">My Work</h2>
+            <p class="text-lg font-semibold text-gray-500 max-w-3xl mx-auto">Explore my recent projects that showcase my
+                expertise in full-stack development, UI/UX design, and problem-solving skills.</p>
+        </div>
+
+        <!-- Redesign project 1 -->
+        <div class="mb-28" data-aos="fade-up">
+            <div class="project-card bg-[#222] rounded-xl overflow-hidden mb-10">
+                <div class="flex flex-col-reverse md:flex-row">
+                    <div class="md:w-1/2 p-8 px-4 md:px-8 bg-white">
+                        <div class="flex items-center mb-4">
+                            <div class="mr-4">
+                                <img src="https://mandar.tech/login-images\dynamic_solution_logo.svg" alt=""
+                                    class="h-10 rounded">
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#333]">Full Stack Laravel Application</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-[15px]">Dynamic Solution's is a Laravel-based platform
+                            connecting users with local professionals. Service providers can register their profiles
+                            while customers can discover, book, and pay for services through an intuitive interface with
+                            real-time scheduling and location-based matching.</p>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-3">Key Features :</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2 text-[15px]">
+                                <li>Google authentication for login / signup</li>
+                                <li>Find Nearby Local Professionals</li>
+                                <li>Google Maps Integration</li>
+                                <li>Verified reviews and ratings system</li>
+                                <li>Secured Payments using PayU Gateway</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <a href="https://tfnext-jlgo.vercel.app/" target="_blank"
+                                class="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-500 transition">Live
+                                Demo</a>
+                            <div
+                                class="px-6 py-2 border border-gray-700 rounded-lg text-gray-600 transition hover:bg-gray-700 hover:text-white">
+                                Case
+                                Study</div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Tech Stack :</h4>
+                            <div class="flex flex-wrap items-center gap-5">
+                                <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                                    class="h-7" /> -->
+                                <i class="fa-brands fa-laravel text-[28px] text-red-500"></i>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/livewire/livewire-original-wordmark.svg"
+                                    class="h-10" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                                    class="h-8" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+                                    class="h-12 mt-[-10px]" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-1/2 px-8 flex flex-col items-center justify-center relative">
+                        <!-- Background with overlay (static) -->
+                        <div class="absolute inset-0 z-0">
+                            <img src="images/ds-1.png" class="w-full h-full object-cover" alt="Background">
+                            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+                        </div>
+
+                        <!-- Swiper container - removed overflow-hidden -->
+                        <div class="swiper mySwiper relative z-10 w-full max-w-4xl py-14">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <!-- Laptop mockup -->
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div
+                                            class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg border-b border-gray-300">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/ds-1.png" class="w-full h-auto" alt="Desktop view 1">
+                                        </div>
+                                    </div>
+                                    <!-- Mobile mockup - positioned absolutely to parent swiper -->
+                                    <div
+                                        class="absolute right-10 bottom-0 w-1/5 border-[1px] rounded-xl border-gray-700 z-[80] transform translate-x-1/4 translate-y-1/4">
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-gray-800 rounded-3xl"></div>
+                                            <div class="relative z-10 bg-gray-500 rounded-3xl">
+                                                <div class="overflow-hidden rounded-2xl">
+                                                    <img src="images/mobile-1.png" class="w-full" alt="Mobile view 1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div
+                                            class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg border-b border-gray-300">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/ds-2.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div
+                                            class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg border-b border-gray-300">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/ds-3.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div
+                                            class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg border-b border-gray-300">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/ds-4.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 5 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/ds-5.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-pagination mt-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="mb-28" data-aos="fade-up">
+            <div class="project-card bg-[#222] rounded-xl overflow-hidden mb-10">
+                <div class="md:flex">
+                    <div class="md:w-1/2 px-8 flex flex-col items-center justify-center relative">
+                        <!-- Background with overlay (static) -->
+                        <div class="absolute inset-0 z-0">
+                            <img src="new/tf-1.png" class="w-full h-full object-cover" alt="Background">
+                            <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+                        </div>
+
+                        <!-- Swiper container - removed overflow-hidden -->
+                        <div class="swiper mySwiper relative z-10 w-full max-w-4xl py-14">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <!-- Laptop mockup -->
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/tf-1.png" class="w-full h-auto" alt="Desktop view 1">
+                                        </div>
+                                    </div>
+                                    <!-- Mobile mockup - positioned absolutely to parent swiper -->
+                                    <div
+                                        class="absolute right-10 bottom-0 w-1/5 border-[1px] rounded-xl border-gray-700 z-[80] transform translate-x-1/4 translate-y-1/4">
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-gray-800 rounded-3xl"></div>
+                                            <div class="relative z-10 bg-gray-100 rounded-3xl">
+                                                <div class="overflow-hidden rounded-2xl">
+                                                    <img src="images/tf-m-1.png" class="w-full" alt="Mobile view 1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/tf-2.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/tf-3.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/tf-4.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-pagination mt-4"></div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-1/2 p-8 px-4 md:px-8 bg-white">
+                        <div class="flex items-center mb-4">
+                            <div class="mr-4">
+                                <img src="images/tflogo.webp" alt="" class="h-10 rounded">
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#333]">Turkish Drama Website</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-[15px]">TFNext is your Turkish drama guide with episode
+                            details, cast info, and streaming links. It offers news, updates, and recommendations in one
+                            place. The clean layout makes browsing effortless. Track all your favorite series easily.
+                        </p>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-3">Key Features :</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2 text-[15px]">
+                                <li>Latest Episodes & Dramas</li>
+                                <li>Cast & Crew Details</li>
+                                <li>News & Updates</li>
+                                <li>Where to Watch</li>
+                                <li>Verified reviews and ratings system</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <a href="https://mandar.tech/" target="_blank"
+                                class="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-500 transition">Live
+                                Demo</a>
+                            <div
+                                class="px-6 py-2 border border-gray-700 rounded-lg text-gray-600 transition hover:bg-gray-700 hover:text-white">
+                                Case
+                                Study</div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Tech Stack :</h4>
+                            <div class="flex flex-wrap items-center gap-5">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg"
+                                    class="h-14" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                                    class="h-10" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                                    class="h-8" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+                                    class="h-12 mt-[-10px]" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="mb-28" data-aos="fade-up">
+            <div class="project-card bg-[#222] rounded-xl overflow-hidden mb-10">
+                <div class="flex flex-col-reverse md:flex-row">
+                    <div class="md:w-1/2 p-8 px-4 md:px-8 bg-white">
+                        <div class="flex items-center mb-4">
+                            <div class="mr-4">
+                                <img src="https://www.ditinex.com/_next/image?url=%2FLogo.png&w=256&q=75" alt=""
+                                    class="h-6 rounded">
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#333]">Landing Page</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-[15px]">Designed and developed a modern, conversion-focused
+                            landing page for Ditinex, a
+                            full-service technology provider specializing in mobile/web applications, cloud services,
+                            and IT solutions.
+                            The responsive design ensures optimal viewing across all devices while maintaining the
+                            site's premium tech aesthetic. I focused on creating a
+                            page that not only looks impressive but effectively communicates Dinex's competitive
+                            advantages in the crowded IT services market.
+                        </p>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-3">Key Features :</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2 text-[15px]">
+                                <li>Responsive Design</li>
+                                <li>Mail Integration</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <a href="https://www.ditinex.com/" target="_blank"
+                                class="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-500 transition">Live
+                                Demo</a>
+                            <div
+                                class="px-6 py-2 border border-gray-700 rounded-lg text-gray-600 transition hover:bg-gray-700 hover:text-white">
+                                Case
+                                Study</div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Tech Stack :</h4>
+                            <div class="flex flex-wrap items-center gap-5">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg"
+                                    class="h-14" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                                    class="h-8" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-1/2 px-8 flex flex-col items-center justify-center relative">
+                        <!-- Background with overlay (static) -->
+                        <div class="absolute inset-0 z-0">
+                            <img src="images/dtx-1.png" class="w-full h-full object-cover" alt="Background">
+                            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+                        </div>
+
+                        <!-- Swiper container - removed overflow-hidden -->
+                        <div class="swiper mySwiper relative z-10 w-full max-w-4xl py-14">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <!-- Laptop mockup -->
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/dtx-1.png" class="w-full h-auto" alt="Desktop view 1">
+                                        </div>
+                                    </div>
+                                    <!-- Mobile mockup - positioned absolutely to parent swiper -->
+                                    <div
+                                        class="absolute right-10 bottom-0 w-1/5 border-[1px] rounded-xl border-gray-700 z-[80] transform translate-x-1/4 translate-y-1/4">
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-gray-800 rounded-3xl"></div>
+                                            <div class="relative z-10 bg-gray-500 rounded-2xl">
+                                                <div class="overflow-hidden rounded-2xl">
+                                                    <img src="new/dtx-m-1.jpg" class="w-full" alt="Mobile view 1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div
+                                            class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg border-b border-gray-300">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/dtx-2.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div
+                                            class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg border-b border-gray-300">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/dtx-3.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="swiper-slide">
+                                    <div class="relative mx-auto w-full max-w-2xl">
+                                        <!-- Browser controls -->
+                                        <div
+                                            class="flex items-center bg-gray-800 px-4 py-3 rounded-t-lg border-b border-gray-300">
+                                            <div class="flex space-x-2 mr-4">
+                                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Screen content -->
+                                        <div class="relative bg-white rounded-b-lg overflow-hidden">
+                                            <img src="new/dtx-4.png" alt="" class="w-full">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-pagination mt-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-me" class="my-20 px-4 md:px-10">
+        <h1 class="text-2xl font-bold uppercase mb-2 pb-5">Contact Me</h1>
+        <div class="md:flex">
+            <div class="w-full md:w-1/2 h-80 md:min-h-[400px]">
+                <iframe class="w-full h-full rounded-xl"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120562.19529511861!2d72.91861478815326!3d19.214035644942232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8fcfe76fd59%3A0xcf367d85f7c50283!2sThane%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1745991640496!5m2!1sen!2sin"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="w-full md:w-1/2 flex items-center justify-center flex-col pt-10 md:pt-0">
+                <div class="space-y-8">
+
+                    <!-- National -->
+                    <div class="flex items-center group">
+                        <div
+                            class="flex-shrink-0 bg-gray-800 p-3 rounded-lg group-hover:bg-blue-900 transition-all duration-300 border border-gray-700">
+                            <i class="fa-solid fa-earth-americas px-1 text-blue-400"></i>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm text-gray-400">Nationality</p>
+                            <a href="tel:+912212345678"
+                                class="text-white hover:text-blue-300 font-medium transition">India</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="flex items-center group">
+                        <div
+                            class="flex-shrink-0 bg-gray-800 p-3 rounded-lg group-hover:bg-blue-900 transition-all duration-300 border border-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm text-gray-400">Mobile</p>
+                            <a href="tel:+919876543210"
+                                class="text-white hover:text-blue-300 font-medium transition">+91
+                                8454906405</a>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-center group">
+                        <div
+                            class="flex-shrink-0 bg-gray-800 p-3 rounded-lg group-hover:bg-blue-900 transition-all duration-300 border border-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm text-gray-400">Email</p>
+                            <a href="mailto:rohan@gmail.com" class="font-medium transition">mkalangutkar13@gmail.com</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // const PowerGlitch = require('powerglitch').PowerGlitch;
+        PowerGlitch.glitch('.profile-image', {
+            timing: {
+                duration: 3000,
+                // easing: "ease-out"
+            },
+            shake: false,
+            slice: {
+                count: 3,              // Number of glitch slices
+                velocity: 10,          // Speed of slices
+                hueRotate: false,      // Disable RGB color shifts
+                minHeight: 0.01,
+                maxHeight: 0.05
+            },
+            // pulse: {
+            //     scale: 1.1
+            // }
+        });
+
+        const phrases = ["Full Stack Developer ", "Backend Engineer ", "Creative Coder "];
+        const el = document.getElementById("typed-text");
+        let currentPhrase = 0;
+        let currentChar = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+
+        function type() {
+            const current = phrases[currentPhrase];
+
+            if (isDeleting) {
+                el.textContent = current.substring(0, currentChar--);
+            } else {
+                el.textContent = current.substring(0, currentChar++);
+            }
+
+            if (!isDeleting && currentChar === current.length) {
+                isDeleting = true;
+                typingSpeed = 1500; // Pause before deleting
+            } else if (isDeleting && currentChar === 0) {
+                isDeleting = false;
+                currentPhrase = (currentPhrase + 1) % phrases.length;
+                typingSpeed = 500;
+            } else {
+                typingSpeed = isDeleting ? 60 : 100;
+            }
+
+            setTimeout(type, typingSpeed);
+        }
+
+        document.addEventListener("DOMContentLoaded", type);
+
+        const progressBar = document.getElementById('progressBar');
+
+        // Debounce scroll events for better performance
+        let isScrolling;
+        window.addEventListener('scroll', function () {
+            // Cancel the previous setTimeout
+            window.clearTimeout(isScrolling);
+
+            // Set a timeout to run after scrolling stops
+            isScrolling = setTimeout(function () {
+                updateProgressBar();
+            }, 16); // ~60fps
+        }, false);
+
+        // Initial call
+        updateProgressBar();
+
+        function updateProgressBar() {
+            // Calculate scroll progress
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollPosition = window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0);
+
+            // Calculate percentage
+            const scrollPercentage = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+            // Update progress bar width
+            progressBar.style.width = scrollPercentage + '%';
+        }
+
+        // Handle resize events
+        window.addEventListener('resize', function () {
+            updateProgressBar();
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 2800,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        });
+
+    </script>
+</body>
+
+</html>
